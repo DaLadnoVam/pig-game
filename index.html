@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Свинья</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <button class="btn-rules" id="btn-rules">Правила игры</button>
+      </header>
+      <main>
+        <div class="popup-rules" id="popup-rules">
+          <div class="popup-rules-wrapper">
+            <div class="btn-close" id="btn-close">
+              <span></span>
+              <span></span>
+            </div>
+            <p class="popup-description">
+              Цель игры — бросая кость, набрать 100 очков. Ход представляет
+              собой серию бросков и заключается в следующем: игрок бросает кость
+              неограниченное число раз и суммирует выпадающие значения. Однако
+              если выпадает единица, вся сумма, набранная за ход, аннулируется и
+              ход переходит к следующему игроку. Игрок может завершить свой ход
+              в любой момент. Побеждает тот игрок, кто первым наберет 100 или
+              более очков.
+            </p>
+            <h2 class="popup-text">Приятной игры</h2>
+          </div>
+        </div>
+        <h1 class="title">Добро пожаловать в игру Свинья</h1>
+        <div class="wrapper">
+          <section class="user user0 user-active">
+            <div class="user-wrapper">
+              <p class="user-name">Игрок 1</p>
+              <h2 class="total-score" id="total-score-0">0</h2>
+            </div>
+            <p class="current-score" id="current-score-0">0</p>
+          </section>
+          <section class="user user1">
+            <div class="user-wrapper">
+              <p class="user-name">Игрок 2</p>
+              <h2 class="total-score" id="total-score-1">0</h2>
+            </div>
+            <p class="current-score" id="current-score-1">0</p>
+          </section>
+          <button class="btn btn-new-game" id="btn-new">Новая игра</button>
+          <button class="btn btn-roll" id="btn-roll">Бросить кость</button>
+          <button class="btn btn-save" id="btn-save">Сохранить</button>
+          <div class="wrapper-dice">
+            <img src="images/4.png" alt="dice" class="dice" />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
