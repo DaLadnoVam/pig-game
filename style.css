@@ -66,6 +66,7 @@ body {
   position: relative;
   z-index: 3;
   cursor: auto;
+  overflow: auto;
 }
 
 .btn-close {
@@ -279,18 +280,19 @@ img[src="images/1.png"] {
     height: 50px;
   }
   .wrapper {
+    width: 100%;
     height: 80%;
     top: 85px;
   }
 
   .user0 {
     align-items: start;
-    padding-left: 30px;
+    padding-left: 10px;
   }
 
   .user1 {
     align-items: end;
-    padding-right: 30px;
+    padding-right: 10px;
   }
 
   .current-score {
@@ -332,5 +334,45 @@ img[src="images/1.png"] {
     position: relative;
     z-index: 3;
     cursor: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    font-size: 16px;
+    padding: 10px 5px;
+  }
+  .current-score {
+    width: 50px;
+  }
+
+  .current-score::before {
+    width: 100%;
+    top: -34px;
+    line-height: 100%;
+  }
+}
+
+@media (max-height: 540px) {
+  .btn-save {
+    bottom: 20px;
+  }
+
+  .btn-roll {
+    bottom: 70px;
+  }
+}
+
+@media (max-height: 435px) {
+  .wrapper {
+    top: 50px;
+  }
+
+  .user {
+    padding: 20px 10px;
+  }
+
+  .btn-new-game {
+    top: 15px;
   }
 }
