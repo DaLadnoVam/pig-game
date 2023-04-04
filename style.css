@@ -41,6 +41,7 @@ body {
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  overflow: auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -59,7 +60,7 @@ body {
 
 .popup-rules-wrapper {
   width: 700px;
-  height: 400px;
+  height: auto;
   background-color: white;
   border-radius: 50px;
   padding: 50px;
@@ -102,14 +103,12 @@ body {
 .popup-description {
   font-size: 20px;
   line-height: 150%;
+  margin-bottom: 50px;
 }
 
 .popup-text {
   font-size: 40px;
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
 }
 
 /*========================================================*/
@@ -280,19 +279,19 @@ img[src="images/1.png"] {
     height: 50px;
   }
   .wrapper {
-    width: 100%;
+    width: 90%;
     height: 80%;
     top: 85px;
   }
 
   .user0 {
     align-items: start;
-    padding-left: 10px;
+    padding-left: 40px;
   }
 
   .user1 {
     align-items: end;
-    padding-right: 10px;
+    padding-right: 40px;
   }
 
   .current-score {
@@ -317,7 +316,7 @@ img[src="images/1.png"] {
 
   .btn {
     font-size: 18px;
-    padding: 5px 15px;
+    /* padding: 5px 15px; */
   }
 
   .wrapper-dice {
@@ -337,11 +336,56 @@ img[src="images/1.png"] {
   }
 }
 
-@media (max-width: 400px) {
-  .btn {
-    font-size: 16px;
-    padding: 10px 5px;
+@media (max-width: 550px) {
+  .user {
+    padding: 20px 30px;
   }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    width: 100%;
+  }
+  .popup-rules-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .btn-description {
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  .user {
+    padding: 10px 20px 85px 20px;
+  }
+
+  .user-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .btn-save {
+    bottom: 30px;
+    right: 30px;
+    transform: translateX(0);
+    left: auto;
+    /* width: 168px; */
+  }
+
+  .btn-roll {
+    left: 30px;
+    transform: translateX(0);
+    bottom: 30px;
+  }
+  .user-name {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+
+  .total-score {
+    font-size: 35px;
+  }
+
   .current-score {
     width: 50px;
   }
@@ -353,26 +397,19 @@ img[src="images/1.png"] {
   }
 }
 
-@media (max-height: 540px) {
-  .btn-save {
-    bottom: 20px;
-  }
-
-  .btn-roll {
-    bottom: 70px;
-  }
-}
-
 @media (max-height: 435px) {
   .wrapper {
     top: 50px;
   }
 
-  .user {
-    padding: 20px 10px;
-  }
-
   .btn-new-game {
     top: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    font-size: 16px;
+    padding: 10px 5px;
   }
 }
