@@ -15,52 +15,61 @@
   </head>
   <body>
     <div class="layout">
+      <!--    header    -->
       <header class="header">
         <button class="btn-rules" id="btn-rules">Правила игры</button>
       </header>
-      <main>
-        <div class="popup-rules" id="popup-rules">
-          <div class="popup-rules-wrapper">
-            <div class="btn-close" id="btn-close">
-              <span></span>
-              <span></span>
+      <main class="main">
+        <div class="main-inner">
+          <!--   popup   -->
+          <div class="popup-rules" id="popup-rules">
+            <div class="popup-rules-wrapper">
+              <div class="btn-close" id="btn-close">
+                <span></span>
+                <span></span>
+              </div>
+              <p class="popup-description">
+                Цель игры — бросая кость, набрать 100 очков. Ход представляет
+                собой серию бросков и заключается в следующем: игрок бросает
+                кость неограниченное число раз и суммирует выпадающие значения.
+                Однако если выпадает единица, вся сумма, набранная за ход,
+                аннулируется и ход переходит к следующему игроку. Игрок может
+                завершить свой ход в любой момент. Побеждает тот игрок, кто
+                первым наберет 100 или более очков.
+              </p>
+              <h2 class="popup-text">Приятной игры</h2>
             </div>
-            <p class="popup-description">
-              Цель игры — бросая кость, набрать 100 очков. Ход представляет
-              собой серию бросков и заключается в следующем: игрок бросает кость
-              неограниченное число раз и суммирует выпадающие значения. Однако
-              если выпадает единица, вся сумма, набранная за ход, аннулируется и
-              ход переходит к следующему игроку. Игрок может завершить свой ход
-              в любой момент. Побеждает тот игрок, кто первым наберет 100 или
-              более очков.
-            </p>
-            <h2 class="popup-text">Приятной игры</h2>
           </div>
-        </div>
-        <h1 class="title">Добро пожаловать в игру Свинья</h1>
-        <div class="wrapper">
-          <section class="user user0 user-active">
-            <div class="user-wrapper">
-              <p class="user-name">Игрок 1</p>
-              <h2 class="total-score" id="total-score-0">0</h2>
+          <h1 class="title">Добро пожаловать в игру Свинья</h1>
+          <!--    game    -->
+          <div class="wrapper">
+            <section class="user user0 user-active">
+              <div class="user-wrapper">
+                <p class="user-name" data-value="user0">Игрок 1</p>
+                <h2 class="total-score" id="total-score-0">0</h2>
+              </div>
+              <p class="current-score" id="current-score-0">0</p>
+            </section>
+            <section class="user user1">
+              <div class="user-wrapper">
+                <p class="user-name" data-value="user0">Игрок 2</p>
+                <h2 class="total-score" id="total-score-1">0</h2>
+              </div>
+              <p class="current-score" id="current-score-1">0</p>
+            </section>
+            <button class="btn btn-new-game" id="btn-new">Новая игра</button>
+            <button class="btn btn-roll" id="btn-roll">Бросить кость</button>
+            <button class="btn btn-save" id="btn-save">Сохранить</button>
+            <div class="wrapper-dice">
+              <img src="images/4.png" alt="dice" class="dice" />
             </div>
-            <p class="current-score" id="current-score-0">0</p>
-          </section>
-          <section class="user user1">
-            <div class="user-wrapper">
-              <p class="user-name">Игрок 2</p>
-              <h2 class="total-score" id="total-score-1">0</h2>
-            </div>
-            <p class="current-score" id="current-score-1">0</p>
-          </section>
-          <button class="btn btn-new-game" id="btn-new">Новая игра</button>
-          <button class="btn btn-roll" id="btn-roll">Бросить кость</button>
-          <button class="btn btn-save" id="btn-save">Сохранить</button>
-          <div class="wrapper-dice">
-            <img src="images/4.png" alt="dice" class="dice" />
           </div>
         </div>
       </main>
+      <h1 class="title-winner">
+        <span class="title-winner__name">Игрок 1</span>
+        ПОБЕДИЛ!!!<img src="images/сup_icon.png" alt="" />
+      </h1>
     </div>
 
     <script src="app.js"></script>

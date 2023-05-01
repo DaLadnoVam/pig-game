@@ -1,7 +1,6 @@
 "use strict";
 
 // popup
-
 const btnRulesEl = document.getElementById("btn-rules");
 const popupEl = document.getElementById("popup-rules");
 const btnClosePopupEl = document.getElementById("btn-close");
@@ -22,7 +21,6 @@ popupEl.addEventListener("click", function (e) {
 });
 
 // functional game
-
 const totalScore0 = document.querySelector("#total-score-0");
 const totalScore1 = document.querySelector("#total-score-1");
 
@@ -38,6 +36,8 @@ diceEl.classList.add("hidden");
 const btnRoll = document.getElementById("btn-roll");
 const btnSave = document.getElementById("btn-save");
 const btnNewGame = document.getElementById("btn-new");
+
+const winnerName = document.querySelector(".title-winner__name");
 
 let currentScore = 0;
 let activePlayer = 0;
@@ -56,6 +56,8 @@ const initGame = function () {
   user0.classList.remove("winner");
   user1.classList.remove("winner");
   user0.classList.add("user-active");
+  document.querySelector(".title-winner").classList.remove("show");
+  winnerName.textContent = "Игрок 1";
 
   currentScore = 0;
   activePlayer = 0;
@@ -102,13 +104,15 @@ const onClickBtnSave = function () {
     document.getElementById(`total-score-${activePlayer}`).textContent =
       totalScores[activePlayer];
     // check total score (total score >= 100)
-    if (totalScores[activePlayer] >= 100) {
+    if (totalScores[activePlayer] >= 30) {
       isPlaying = false;
       document.querySelector(`.user${activePlayer}`).classList.add("winner");
       document
         .querySelector(`.user${activePlayer}`)
         .classList.remove("user-active");
       diceEl.classList.add("hidden");
+      document.querySelector(".title-winner").classList.add("show");
+      winnerName.textContent = activePlayer === 0 ? "Игрок 1" : "Игрок 2";
     } else {
       switchActivePlayer();
     }
